@@ -3,24 +3,24 @@ import PokemonThumbnail from './components/PokemonThumbnail';
 import './App.css';
 
 function App() {
-    const [URL, setURL] = useState("https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1");
+    const [URL, setURL] = useState("https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1 ");
     const [allPokemons, setAllPokemons] = useState([]);
 
     const getAllPokemons = async () => {
-        const res = await fetch(URL)
-        const data = (await res.json())[0]
-        setURL(data.next)
+        const res = await fetch(URL);
+        const data = (await res.json())[0];
+        setURL(data.next);
         function createPokemonObject(result) {
             result.forEach(async (pokemon) => {
-                const res = await fetch(pokemon.url)
+                const res = await fetch(pokemon.url);
                 const data = (await res.json())[0];
-                setAllPokemons(currentList => [...currentList, data])
+                setAllPokemons(currentList => [...currentList, data]);
             });
         }
-        createPokemonObject(await data.results)
+        createPokemonObject(await data.results);
     }
     useEffect(() => {
-        getAllPokemons()
+        getAllPokemons();
         // eslint-disable-next-line
     }, []);
 
