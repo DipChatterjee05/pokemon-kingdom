@@ -3,7 +3,7 @@ import PokemonThumbnail from './components/PokemonThumbnail';
 import './App.css';
 
 function App() {
-    const [URL, setURL] = useState("https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1 ");
+    const [URL, setURL] = useState("https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1");
     const [allPokemons, setAllPokemons] = useState([]);
 
     const getAllPokemons = async () => {
