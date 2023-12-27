@@ -6,11 +6,14 @@ This project is a React-based web application that fetches Pokémon Data from an
 
 ## Key Features
 
-1. Responsiveness.
-2. Reusable Components.
-3. Asynchronous Functionality and React Hooks.
-4. Core CSS Styling.
+- Responsiveness.
+- Reusable Components.
+- Asynchronous Functionality and React Hooks.
+- Core CSS Styling.
 
 ## Technologies Used
 
-HTML5, CSS3, JavaScript, React
+- HTML5
+- CSS3
+- JavaScript
+- React
