@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import ExpandedContent from './ExpandedContent';
+import React, { useState } from "react";
+import ExpandedContent from "./ExpandedContent";
 
 function PokemonThumbnail({
     id,

@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import PokemonThumbnail from './components/PokemonThumbnail';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import PokemonThumbnail from "./components/PokemonThumbnail";
+import "./App.css";
 
 function App() {
-    const [URL, setURL] = useState("https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1");
+    const [URL, setURL] = useState(
+        "https://content.newtonschool.co/v1/pr/64ccef982071a9ad01d36ff6/pokemonspages1"
+    );
     const [allPokemons, setAllPokemons] = useState([]);
 
     const getAllPokemons = async () => {
@@ -14,11 +16,11 @@ function App() {
             result.forEach(async (pokemon) => {
                 const res = await fetch(pokemon.url);
                 const data = (await res.json())[0];
-                setAllPokemons(currentList => [...currentList, data]);
+                setAllPokemons((currentList) => [...currentList, data]);
             });
         }
         createPokemonObject(await data.results);
-    }
+    };
     useEffect(() => {
         getAllPokemons();
         // eslint-disable-next-line
@@ -40,7 +42,7 @@ function App() {
                 <div className="app-container">
                     <div className="pokemon-container">
                         <div className="all-container">
-                            {allPokemons.map((pokemon, index) =>
+                            {allPokemons.map((pokemon, index) => (
                                 <PokemonThumbnail
                                     id={pokemon.id}
                                     name={pokemon.name}
@@ -62,14 +64,16 @@ function App() {
                                     bs5={pokemon.stats[4].base_stat}
                                     bs6={pokemon.stats[5].base_stat}
                                 />
-                            )}
+                            ))}
                         </div>
-                        <button className="load-more" onClick={() => getAllPokemons()}>More Pokemons</button>
+                        <button className="load-more" onClick={() => getAllPokemons()}>
+                            More Pokemons
+                        </button>
                     </div>
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
 export default App;

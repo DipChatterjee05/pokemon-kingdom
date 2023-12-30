@@ -1,15 +1,31 @@
-import React from 'react';
+import React from "react";
 
 function ExpandedContent({ data, visible, setvisible, image, name, type }) {
-    const { weight, height, stat1, stat2, stat3, stat4, stat5, stat6, bs1, bs2, bs3, bs4, bs5, bs6 } = data;
+    const {
+        weight,
+        height,
+        stat1,
+        stat2,
+        stat3,
+        stat4,
+        stat5,
+        stat6,
+        bs1,
+        bs2,
+        bs3,
+        bs4,
+        bs5,
+        bs6,
+    } = data;
 
     return (
         <>
-            <div className='opaquescreen'>
-
-            </div>
-            <div className={`expanded-overlay ${type} ${visible ? 'visible' : ''}`}>
-                <button className={`close-button ${type} `} onClick={() => setvisible(false)}>
+            <div className="opaquescreen"></div>
+            <div className={`expanded-overlay ${type} ${visible ? "visible" : ""}`}>
+                <button
+                    className={`close-button ${type} `}
+                    onClick={() => setvisible(false)}
+                >
                     X
                 </button>
                 <div className="expanded-left">

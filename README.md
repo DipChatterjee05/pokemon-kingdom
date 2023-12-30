@@ -8,12 +8,12 @@ This project is a React-based web application that fetches Pokémon Data from an
 
 - Responsiveness.
 - Reusable Components.
-- Asynchronous Functionality and React Hooks.
+- Asynchronous Functionality & React Hooks.
 - Core CSS Styling.
 
 ## Technologies Used
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 - React
